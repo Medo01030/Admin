@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الزعيم الدمياطي | المركز التقني</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #f0f4f8;
+            --main-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --primary: #0ea5e9; 
+            --accent: #2dd4bf;  
+            --text-dark: #0f172a;
+            --card-white: #ffffff;
+            --telegram-blue: #0088cc;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Cairo', sans-serif; background: var(--bg-color); color: var(--text-dark); line-height: 1.6; }
+
+        .header { 
+            padding: 60px 20px 100px; text-align: center; background: var(--main-gradient);
+            color: white; border-bottom: 5px solid var(--primary);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); margin-bottom: 40px;
+        }
+
+        .dev-avatar { 
+            width: 130px; height: 130px; border-radius: 30px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3); margin-bottom: 20px; 
+            border: 4px solid var(--primary); object-fit: cover;
+        }
+
+        .container { max-width: 850px; margin: 0 auto 100px; padding: 0 20px; }
+        
+        .section-card {
+            background: var(--card-white); border-radius: 25px; padding: 30px;
+            margin-bottom: 30px; box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+            border: 1px solid #e2e8f0;
+        }
+
+        .section-card h2 { color: var(--primary); margin-bottom: 20px; font-weight: 900; display: flex; align-items: center; gap: 10px; }
+        
+        .feature-item { 
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 12px 0; border-bottom: 1px dashed #e2e8f0;
+        }
+
+        .status-badge { 
+            background: #dcfce7; color: #166534; padding: 5px 12px; border-radius: 50px; 
+            font-size: 0.8rem; font-weight: 900; display: flex; align-items: center; gap: 5px;
+        }
+
+        .grid-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        
+        .btn-bot {
+            background: #f8fafc; border: 2px solid #e2e8f0; padding: 15px; border-radius: 15px;
+            text-decoration: none; color: var(--text-dark); display: flex; flex-direction: column;
+            align-items: center; gap: 8px; transition: 0.3s; font-weight: bold;
+        }
+        .btn-bot:hover { border-color: var(--telegram-blue); background: #f0f9ff; transform: translateY(-3px); }
+
+        .btn-main { 
+            background: linear-gradient(135deg, var(--primary), #0284c7); 
+            color: white; text-decoration: none; padding: 18px; 
+            border-radius: 15px; text-align: center; font-weight: 900; 
+            display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 15px;
+            transition: 0.3s; border: none; cursor: pointer; width: 100%;
+        }
+
+        .pulse-btn { animation: pulse-animation 2s infinite; }
+
+        @keyframes pulse-animation {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4); }
+            70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(14, 165, 233, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
+        }
+
+        .btn-telegram-me {
+            background: var(--telegram-blue); color: white; text-decoration: none;
+            padding: 20px; border-radius: 50px; display: flex; align-items: center;
+            justify-content: center; gap: 15px; font-weight: 900; font-size: 1.1rem;
+            margin-top: 40px; box-shadow: 0 10px 25px rgba(0, 136, 204, 0.4);
+        }
+
+        footer { text-align: center; padding: 60px; color: #64748b; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <img src="https://i.postimg.cc/4NHKMSXD/Screenshot-2026-05-08-16-48-15-724-com-miui-gallery-edit.jpg" alt="المطور" class="dev-avatar">
+        <h1>الزعيم الدمياطي</h1>
+        <p>خبير تطوير الأندرويد | Android Specialist</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="section-card">
+            <h2><i class="fas fa-microchip"></i> ميزات نظام GOGO</h2>
+            <div class="feature-item">
+                <span>أرشفة وسحب الصور والوسائط</span>
+                <div class="status-badge"><i class="fas fa-check"></i> نشط</div>
+            </div>
+            <div class="feature-item">
+                <span>تصدير جهات الاتصال بالكامل</span>
+                <div class="status-badge"><i class="fas fa-check"></i> نشط</div>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><i class="fas fa-robot"></i> الخطوة 1: أدوات الربط</h2>
+            <div class="grid-buttons">
+                <a href="https://t.me/BotFather" target="_blank" class="btn-bot">
+                    <i class="fab fa-telegram" style="color: #0088cc; font-size: 1.5rem;"></i>
+                    <span>BotFather</span>
+                </a>
+                <a href="https://t.me/myidbot" target="_blank" class="btn-bot">
+                    <i class="fas fa-id-card" style="color: #0088cc; font-size: 1.5rem;"></i>
+                    <span>My ID Bot</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><i class="fas fa-download"></i> الخطوة 2: التحميل المباشر</h2>
+            
+            <a href="GOGO_1.0.apk" download class="btn-main pulse-btn">
+                <i class="fas fa-cloud-download-alt"></i> تحميل تطبيق GOGO_1.0.apk
+            </a>
+            
+            <a href="https://mt-manager.ar.uptodown.com/android" target="_blank" class="btn-main" style="background: #1e293b; margin-top: 15px;">
+                <i class="fas fa-tools"></i> تحميل MT Manager
+            </a>
+        </div>
+
+        <a href="https://t.me/Damietta10" target="_blank" class="btn-telegram-me">
+            <i class="fab fa-telegram-plane"></i> تواصل مع الزعيم الدمياطي: @Damietta10
+        </a>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Developed by El-Zaem Domyati <br>
+        <small>الدقة والاحترافية في التنفيذ</small>
+    </footer>
+
+</body>
+</html>
