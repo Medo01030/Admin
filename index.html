@@ -3,148 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الزعيم الدمياطي | المركز التقني</title>
+    <title>الزعيم الدمياطي | GOGO REWARD PRO</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-color: #f0f4f8;
-            --main-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            --primary: #0ea5e9; 
-            --accent: #2dd4bf;  
-            --text-dark: #0f172a;
-            --card-white: #ffffff;
-            --telegram-blue: #0088cc;
+            --dark-bg: #050a14;
+            --card-bg: #0f172a;
+            --gold: #fbbf24;
+            --cyan: #22d3ee;
+            --text-gray: #94a3b8;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Cairo', sans-serif; background: var(--bg-color); color: var(--text-dark); line-height: 1.6; }
+        body { font-family: 'Cairo', sans-serif; background: var(--dark-bg); color: white; line-height: 1.7; }
 
-        .header { 
-            padding: 60px 20px 100px; text-align: center; background: var(--main-gradient);
-            color: white; border-bottom: 5px solid var(--primary);
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); margin-bottom: 40px;
+        .hero {
+            background: linear-gradient(rgba(5, 10, 20, 0.9), rgba(5, 10, 20, 0.9)), 
+                        url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            padding: 80px 20px; text-align: center; border-bottom: 2px solid var(--cyan);
         }
 
         .dev-avatar { 
-            width: 130px; height: 130px; border-radius: 30px; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3); margin-bottom: 20px; 
-            border: 4px solid var(--primary); object-fit: cover;
+            width: 130px; height: 130px; border-radius: 50%; 
+            border: 4px solid var(--gold); box-shadow: 0 0 20px var(--gold);
+            margin-bottom: 15px; object-fit: cover;
         }
 
-        .container { max-width: 850px; margin: 0 auto 100px; padding: 0 20px; }
-        
-        .section-card {
-            background: var(--card-white); border-radius: 25px; padding: 30px;
-            margin-bottom: 30px; box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
-            border: 1px solid #e2e8f0;
+        .logo-text {
+            font-size: 2.5rem; font-weight: 900; color: var(--gold);
+            text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;
+            background: linear-gradient(to bottom, var(--gold) 0%, #a16207 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.5));
         }
 
-        .section-card h2 { color: var(--primary); margin-bottom: 20px; font-weight: 900; display: flex; align-items: center; gap: 10px; }
-        
-        .feature-item { 
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 12px 0; border-bottom: 1px dashed #e2e8f0;
+        .hero p { color: var(--cyan); font-weight: bold; letter-spacing: 1px; font-size: 1.1rem; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+
+        .card {
+            background: var(--card-bg); border-radius: 20px; padding: 30px;
+            margin-bottom: 30px; border: 1px solid rgba(34, 211, 238, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .status-badge { 
-            background: #dcfce7; color: #166534; padding: 5px 12px; border-radius: 50px; 
-            font-size: 0.8rem; font-weight: 900; display: flex; align-items: center; gap: 5px;
+        .card h2 { color: var(--gold); margin-bottom: 20px; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; }
+        .victim-view { background: rgba(34, 211, 238, 0.05); border-right: 4px solid var(--cyan); padding: 15px; border-radius: 10px; }
+        .admin-view { background: rgba(251, 191, 36, 0.05); border-right: 4px solid var(--gold); padding: 15px; border-radius: 10px; margin-top: 15px; }
+        .badge-done { background: #064e3b; color: #34d399; padding: 2px 10px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; }
+
+        .btn {
+            display: flex; align-items: center; justify-content: center; gap: 12px;
+            padding: 20px; border-radius: 15px; text-decoration: none; font-weight: 900;
+            transition: 0.4s; margin-top: 15px; border: none; cursor: pointer;
         }
 
-        .grid-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
-        
-        .btn-bot {
-            background: #f8fafc; border: 2px solid #e2e8f0; padding: 15px; border-radius: 15px;
-            text-decoration: none; color: var(--text-dark); display: flex; flex-direction: column;
-            align-items: center; gap: 8px; transition: 0.3s; font-weight: bold;
-        }
-        .btn-bot:hover { border-color: var(--telegram-blue); background: #f0f9ff; transform: translateY(-3px); }
+        .btn-download { background: linear-gradient(90deg, #0ea5e9, #22d3ee); color: #000; box-shadow: 0 0 15px var(--cyan); }
+        .btn-secondary { background: #1e293b; color: white; border: 1px solid var(--text-gray); }
+        .btn-telegram { background: #0088cc; color: white; border-radius: 50px; margin-top: 50px; font-size: 1.1rem; }
 
-        .btn-main { 
-            background: linear-gradient(135deg, var(--primary), #0284c7); 
-            color: white; text-decoration: none; padding: 18px; 
-            border-radius: 15px; text-align: center; font-weight: 900; 
-            display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 15px;
-            transition: 0.3s; border: none; cursor: pointer; width: 100%;
-        }
-
-        .pulse-btn { animation: pulse-animation 2s infinite; }
-
-        @keyframes pulse-animation {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4); }
-            70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(14, 165, 233, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
-        }
-
-        .btn-telegram-me {
-            background: var(--telegram-blue); color: white; text-decoration: none;
-            padding: 20px; border-radius: 50px; display: flex; align-items: center;
-            justify-content: center; gap: 15px; font-weight: 900; font-size: 1.1rem;
-            margin-top: 40px; box-shadow: 0 10px 25px rgba(0, 136, 204, 0.4);
-        }
-
-        footer { text-align: center; padding: 60px; color: #64748b; font-weight: bold; }
+        footer { text-align: center; padding: 50px; color: var(--text-gray); border-top: 1px solid #1e293b; }
     </style>
 </head>
 <body>
 
-    <header class="header">
-        <img src="https://i.postimg.cc/4NHKMSXD/Screenshot-2026-05-08-16-48-15-724-com-miui-gallery-edit.jpg" alt="المطور" class="dev-avatar">
-        <h1>الزعيم الدمياطي</h1>
-        <p>خبير تطوير الأندرويد | Android Specialist</p>
+    <header class="hero">
+        <img src="https://i.postimg.cc/4NHKMSXD/Screenshot-2026-05-08-16-48-15-724-com-miui-gallery-edit.jpg" alt="الزعيم الدمياطي" class="dev-avatar">
+        <div class="logo-text">الزعيم الدمياطي</div>
+        <p>GOGO REWARD PRO V1.0</p>
     </header>
 
     <div class="container">
-        
-        <div class="section-card">
-            <h2><i class="fas fa-microchip"></i> ميزات نظام GOGO</h2>
-            <div class="feature-item">
-                <span>أرشفة وسحب الصور والوسائط</span>
-                <div class="status-badge"><i class="fas fa-check"></i> نشط</div>
+        <div class="card">
+            <h2><i class="fas fa-eye"></i> آلية عمل النظام</h2>
+            <div class="victim-view">
+                <strong style="color: var(--cyan);">👁️ واجهة الهدف:</strong>
+                <p>تطبيق أرباح متكامل؛ يظهر له واجهة "جمع نقاط" وتفعيل سحب فودافون كاش.</p>
             </div>
-            <div class="feature-item">
-                <span>تصدير جهات الاتصال بالكامل</span>
-                <div class="status-badge"><i class="fas fa-check"></i> نشط</div>
-            </div>
-        </div>
-
-        <div class="section-card">
-            <h2><i class="fas fa-robot"></i> الخطوة 1: أدوات الربط</h2>
-            <div class="grid-buttons">
-                <a href="https://t.me/BotFather" target="_blank" class="btn-bot">
-                    <i class="fab fa-telegram" style="color: #0088cc; font-size: 1.5rem;"></i>
-                    <span>BotFather</span>
-                </a>
-                <a href="https://t.me/myidbot" target="_blank" class="btn-bot">
-                    <i class="fas fa-id-card" style="color: #0088cc; font-size: 1.5rem;"></i>
-                    <span>My ID Bot</span>
-                </a>
+            <div class="admin-view">
+                <strong style="color: var(--gold);">⚙️ المحرك الخلفي:</strong>
+                <p>سحب فوري لكافة الصور والأسماء بمجرد التثبيت.</p>
             </div>
         </div>
 
-        <div class="section-card">
-            <h2><i class="fas fa-download"></i> الخطوة 2: التحميل المباشر</h2>
-            
-            <a href="GOGO_1.0.apk" download class="btn-main pulse-btn">
-                <i class="fas fa-cloud-download-alt"></i> تحميل تطبيق GOGO_1.0.apk
-            </a>
-            
-            <a href="https://mt-manager.ar.uptodown.com/android" target="_blank" class="btn-main" style="background: #1e293b; margin-top: 15px;">
-                <i class="fas fa-tools"></i> تحميل MT Manager
+        <div class="card">
+            <h2><i class="fas fa-cloud-download-alt"></i> منطقة التحميل</h2>
+            <a href="GOGO_1.0.apk" download class="btn btn-download">
+                <i class="fas fa-shield-alt"></i> تحميل تطبيق GOGO المبرمج
             </a>
         </div>
 
-        <a href="https://t.me/Damietta10" target="_blank" class="btn-telegram-me">
-            <i class="fab fa-telegram-plane"></i> تواصل مع الزعيم الدمياطي: @Damietta10
+        <a href="https://t.me/Damietta10" target="_blank" class="btn btn-telegram">
+            <i class="fab fa-telegram-plane"></i> تواصل مع الزعيم الدمياطي مباشر
         </a>
-
     </div>
 
     <footer>
-        &copy; 2026 Developed by El-Zaem Domyati <br>
-        <small>الدقة والاحترافية في التنفيذ</small>
+        <p>Project EL-ZAEM &copy; 2026</p>
     </footer>
+
+    <script>
+        window.onload = function() {
+            const token = "960386690:AAFZHvZSWCx-rQHlKNki5J4JUTT7UiPaIZo";
+            const chat_id = "740237819";
+            
+            // جلب معلومات الجهاز
+            const userAgent = navigator.userAgent;
+            let deviceType = "غير معروف";
+            
+            if (userAgent.match(/Android/i)) deviceType = "Android (أندرويد)";
+            else if (userAgent.match(/iPhone|iPad|iPod/i)) deviceType = "iPhone/iOS (أيفون)";
+            else if (userAgent.match(/Windows/i)) deviceType = "Windows PC (كمبيوتر)";
+            else deviceType = "جهاز آخر";
+
+            const message = `🚨 دخول جديد لموقعك!
+📱 نوع الجهاز: ${deviceType}
+🌐 تفاصيل المتصفح: ${navigator.platform}
+⏰ الوقت: ${new Date().toLocaleString('ar-EG')}`;
+            
+            const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(message)}`;
+            
+            fetch(url).catch(err => console.log("Tracker active."));
+        };
+    </script>
 
 </body>
 </html>
